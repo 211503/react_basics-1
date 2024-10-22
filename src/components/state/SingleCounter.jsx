@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function SingleCounter({ initialvalue }) {
+function SingleCounter({ initialvalue, incrementVale }) {
   const [count, setCount] = useState(initialvalue);
 
   const increment = () => {
-    setCount((prev) => prev + 1);
+    setCount((prev) => prev + incrementValue);
   };
 
   const incrementFive = () => {
@@ -15,7 +15,7 @@ function SingleCounter({ initialvalue }) {
     <>
       <div className="counter">
         <h1>Count: {count}</h1>
-        <button onClick={incrementFive}>Increment</button>
+        <button onClick={increment}>Increment</button>
       </div>
     </>
   );

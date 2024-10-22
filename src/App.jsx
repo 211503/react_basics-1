@@ -11,11 +11,18 @@ import UserProfile from "./components/props/UserProfile";
 import Parent from "./components/props/propsAsMethod/Parent";
 import ChildrenContainer from "./components/props/ChildrenContainer";
 import SingleCounter from "./components/state/SingleCounter";
+import MultiCounter from "./components/state/MultiCounter";
 import ArrayWithoutKey from "./components/listRendering/ArrayWithoutKey";
 import IndexAsKeyIssue from "./components/listRendering/IndexAsKeyIssue";
 import ObjectWithIdAsKey from "./components/listRendering/ObjectWithIdAsKey";
 import ObjectWithoutId from "./components/listRendering/ObjectWithoutId";
 import ArrayWithKeyAsIndex from "./components/ListRendering/ArrayWithKeyAsIndex";
+import CssStyleSheet from "./components/cssStyles//CssStylesheet";
+import InlineCss from "./components/cssStyles/InlineCss";
+import CssModule from "./components/cssStyles/CssModule";
+import ThemeStyledComponent from "./components/cssStyles/theme/ThemeStyledComponent";
+import Profile from "./components/FormInputs/Profile";
+import StyleComponent from "./components/cssStyles/styledComponents/Component";
 
 function App() {
   return (
@@ -69,17 +76,30 @@ function App() {
       </ChildrenContainer> */}
 
       {/* state */}
-      {/* <SingleCounter initialvalue={0} /> */}
+      {/* <SingleCounter initialvalue={0} incrementValue={1} />
+      <SingleCounter initialvalue={0} incrementValue={5} />
+      <SingleCounter initialvalue={0} incrementValue={10} /> */}
+      {/* <MultiCounter /> */}
 
       {/* list rendering */}
-      <div className="list-rendering">
+      {/* <div className="list-rendering">
         <h1>React List Rendering Examples</h1>
         <ArrayWithoutKey />
         <ArrayWithKeyAsIndex />
         <ObjectWithIdAsKey />
         <ObjectWithoutId />
         <IndexAsKeyIssue />
-      </div>
+      </div> */}
+
+      {/* form handling */}
+      {/* <Profile /> */}
+
+      {/* css styling */}
+      <CssStyleSheet />
+      <InlineCss />
+      <CssModule />
+      <StyleComponent />
+      <ThemeStyledComponent />
     </>
   );
 }
