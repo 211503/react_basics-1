@@ -25,8 +25,8 @@ const Profile = () => {
   };
 
   // Filter profiles based on search query
-  const filteredProfiles = profiles.filter((profile) =>
-    profile.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredProfiles = profiles.filter(
+    (profile) => profile.name.toLowerCase() === searchQuery.toLowerCase()
   );
 
   return (

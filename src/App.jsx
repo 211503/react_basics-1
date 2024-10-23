@@ -23,6 +23,9 @@ import CssModule from "./components/cssStyles/CssModule";
 import ThemeStyledComponent from "./components/cssStyles/theme/ThemeStyledComponent";
 import Profile from "./components/FormInputs/Profile";
 import StyleComponent from "./components/cssStyles/styledComponents/Component";
+import { useTheme } from "styled-components";
+import UseEffectCounters from "./components/useEffect/UseEffectCounters";
+import JokesContainer from "./components/useEffect/apiFetch/JokesContainer";
 
 function App() {
   return (
@@ -95,11 +98,15 @@ function App() {
       {/* <Profile /> */}
 
       {/* css styling */}
-      <CssStyleSheet />
+      {/* <CssStyleSheet />
       <InlineCss />
       <CssModule />
       <StyleComponent />
-      <ThemeStyledComponent />
+      <ThemeStyledComponent /> */}
+
+      {/* use effect  */}
+      {/* <UseEffectCounters /> */}
+      <JokesContainer />
     </>
   );
 }
