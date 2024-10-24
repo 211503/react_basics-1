@@ -11,8 +11,8 @@ const JokeComponent = ({ id, onRemove }) => {
       .get("https://v2.jokeapi.dev/joke/Programming")
       .then((response) => {
         const data = response.data;
-        const setup = data.setup ? data.setup : "No setup available";
-        const delivery = data.delivery ? data.delivery : "No joke available";
+        const setup = data.setup ? data.setup : "No joke";
+        const delivery = data.delivery ? data.delivery : "No joke";
         setJoke({ setup, delivery });
       })
       .catch((error) => {
@@ -26,14 +26,18 @@ const JokeComponent = ({ id, onRemove }) => {
   }, [id]);
 
   return (
-    <div className="joke">
-      <h4>Programming Joke {id}</h4>
-      <p>{joke.setup}</p>
-      <p>{joke.delivery}</p>
-      <button className="joke-btn" onClick={() => onRemove(id)}>
-        Remove Joke {id}
-      </button>
-    </div>
+    <>
+      {joke.setup !== "No joke" && (
+        <div className="joke">
+          <h4>Programming Joke</h4>
+          <p>{joke.setup}</p>
+          <p>{joke.delivery}</p>
+          <button className="joke-btn" onClick={() => onRemove(id)}>
+            Remove Joke
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

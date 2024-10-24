@@ -337,7 +337,7 @@ h2 {
 }
 
 .list-card {
-  background-color: var(--tertiary-color);
+  background-color: white;
   border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 20px;

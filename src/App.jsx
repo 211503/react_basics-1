@@ -26,6 +26,16 @@ import StyleComponent from "./components/cssStyles/styledComponents/Component";
 import { useTheme } from "styled-components";
 import UseEffectCounters from "./components/useEffect/UseEffectCounters";
 import JokesContainer from "./components/useEffect/apiFetch/JokesContainer";
+import ParentCounter from "./components/pureComponent/ParentComponent";
+import InputFocus from "./components/refs/InputFocus";
+import Timer from "./components/refs/Timer";
+import VideoPlayer from "./components/refs/VideoPlayer";
+import ParentComponent from "./components/refs/refForward/ParentComponent";
+import { UserProviderSingle } from "./components/context/singleContext/UserContext";
+import UserContextProfileSingle from "./components/context/singleContext/UserProfile";
+import { UserProviderMulti } from "./components/context/multiContext/UserContext";
+import { ThemeProvider } from "./components/context/multiContext/ThemeContext";
+import UserContextProfileMulti from "./components/context/multiContext/UserProfile";
 
 function App() {
   return (
@@ -106,7 +116,28 @@ function App() {
 
       {/* use effect  */}
       {/* <UseEffectCounters /> */}
-      <JokesContainer />
+      {/* <JokesContainer /> */}
+
+      {/* pure components */}
+      {/* <ParentCounter /> */}
+
+      {/* refs */}
+      {/* <InputFocus />
+      <Timer />
+      <VideoPlayer />
+      <ParentComponent /> */}
+
+      {/* singlecontext  */}
+      {/* <UserProviderSingle>
+        <UserContextProfileSingle />
+      </UserProviderSingle> */}
+
+      {/* multi context  */}
+      <UserProviderMulti>
+        <ThemeProvider>
+          <UserContextProfileMulti />
+        </ThemeProvider>
+      </UserProviderMulti>
     </>
   );
 }

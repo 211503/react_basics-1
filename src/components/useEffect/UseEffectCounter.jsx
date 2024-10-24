@@ -6,19 +6,25 @@ const UseEffectCounter = ({ initialValue, incrementValue }) => {
   const increment = () => {
     setCount(count + incrementValue);
   };
-  // Simulate componentDidMount
-  useEffect(() => {
-    console.log("Component mounted");
 
-    // Simulate componentWillUnmount
+  useEffect(() => {
+    console.log("Always");
+  });
+
+  useEffect(() => {
+    console.log("Counter Component Mounted");
+
     return () => {
-      console.log("Component unmounted");
+      console.log("Counter Component is unMounted");
     };
   }, []);
 
-  // Simulate componentDidUpdate (runs when someProp or count changes)
   useEffect(() => {
-    console.log("Component updated because someProp or count changed");
+    console.log("Counter Component prop is updated");
+  }, [initialValue, incrementValue]);
+
+  useEffect(() => {
+    console.log("Counter Component state is updated");
   }, [count]);
 
   return (

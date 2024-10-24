@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import JokeComponent from "./JokeComponent";
 
 const JokesContainer = () => {
-  const [jokes, setJokes] = useState([1, 2, 3]); // Example with 3 jokes initially
+  const [jokes, setJokes] = useState([]); // Example with 3 jokes initially
 
   const removeJoke = (id) => {
     setJokes(jokes.filter((jokeId) => jokeId !== id));
   };
 
   const addJoke = () => {
-    const nextId = jokes.length + 1;
+    const nextId = uuidv4();
     setJokes([...jokes, nextId]);
   };
 
