@@ -13,7 +13,7 @@ const ParentComponent = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="ref-forward-container">
         <h1>Ref Forwarding Example</h1>
         <CustomInput ref={inputRef} label="Enter your name:" />
         <div className="btns">

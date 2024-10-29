@@ -421,34 +421,6 @@ h2 {
   background-color: var(--btn-hover-bg);
 }
 
-/* Root variables for color scheme */
-:root {
-  --primary-color: #8e3e63; /* Dark Pinkish */
-  --secondary-color: #d2649a; /* Light Pink */
-  --tertiary-color: #f6fab9; /* Soft Yellow */
-  --accent-color: #cae6b2; /* Pale Green */
-  --input-border-color: #cae6b2; /* Input border */
-  --input-focus-border: #8e3e63; /* Input focus border */
-  --input-bg-color: #f6fab9; /* Input background */
-  --btn-bg-color: #d2649a; /* Button background */
-  --btn-hover-bg: #8e3e63; /* Button hover background */
-  --btn-color: #f6fab9; /* Button text color */
-  --text-color: #2e2e2e; /* Dark text */
-}
-
-/* Global body styling */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: var(--tertiary-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 /* Styling for counters section */
 .counters-container {
   background-color: var(--primary-color);
@@ -601,4 +573,16 @@ body {
 .joke-btn:hover {
   background-color: var(--input-border-color); /* Button hover background */
   color: black;
+}
+
+/*pure component*/
+.memo-container,
+.timer-container,
+.video-container,
+.ref-forward-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--tertiary-color);
 }

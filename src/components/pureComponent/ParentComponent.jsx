@@ -14,7 +14,7 @@ const ParentCounter = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="memo-container">
         <h1>React.memo Example</h1>
 
         {/* Only re-renders when `count` changes */}

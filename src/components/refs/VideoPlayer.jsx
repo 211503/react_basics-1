@@ -13,7 +13,7 @@ const VideoPlayer = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="video-container">
         <video
           ref={videoRef}
           width="400"

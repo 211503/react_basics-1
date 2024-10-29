@@ -35,8 +35,8 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div>
+    <>
+      <div className="timer-container">
         <h1>Timer: {count}</h1>
         <div className="btns">
           <button onClick={startTimer} disabled={isRunning}>
@@ -48,7 +48,7 @@ const Timer = () => {
           <button onClick={stopTimer}>Stop</button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

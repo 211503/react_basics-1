@@ -3,7 +3,8 @@ import React, { useRef } from "react";
 const InputFocus = () => {
   const inputRef = useRef(null);
 
-  const handleFocus = () => {
+  const handleFocus = (event) => {
+    event.preventDefault();
     inputRef.current.focus(); // Directly access the DOM input and focus it
   };
 

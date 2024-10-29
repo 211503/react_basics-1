@@ -36,6 +36,8 @@ import UserContextProfileSingle from "./components/context/singleContext/UserPro
 import { UserProviderMulti } from "./components/context/multiContext/UserContext";
 import { ThemeProvider } from "./components/context/multiContext/ThemeContext";
 import UserContextProfileMulti from "./components/context/multiContext/UserProfile";
+import ClickCounter from "./components/higherOrderComponent/ClickCounter";
+import HoverCounter from "./components/higherOrderComponent/HoverCounter";
 
 function App() {
   return (
@@ -115,8 +117,8 @@ function App() {
       <ThemeStyledComponent /> */}
 
       {/* use effect  */}
-      {/* <UseEffectCounters /> */}
-      {/* <JokesContainer /> */}
+      {/* <UseEffectCounters />
+      <JokesContainer /> */}
 
       {/* pure components */}
       {/* <ParentCounter /> */}
@@ -133,11 +135,15 @@ function App() {
       </UserProviderSingle> */}
 
       {/* multi context  */}
-      <UserProviderMulti>
+      {/* <UserProviderMulti>
         <ThemeProvider>
           <UserContextProfileMulti />
         </ThemeProvider>
-      </UserProviderMulti>
+      </UserProviderMulti> */}
+
+      {/* higher order component */}
+      <ClickCounter name="Clicked" />
+      <HoverCounter name="Hovered" />
     </>
   );
 }
