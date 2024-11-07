@@ -38,6 +38,10 @@ import { ThemeProvider } from "./components/context/multiContext/ThemeContext";
 import UserContextProfileMulti from "./components/context/multiContext/UserProfile";
 import ClickCounter from "./components/higherOrderComponent/ClickCounter";
 import HoverCounter from "./components/higherOrderComponent/HoverCounter";
+import ReducerParentCounter from "./components/useReducer/ParentCounter";
+import { AuthProvider } from "./components/useReducer/withContext/AuthContext";
+import Login from "./components/useReducer/withContext/Login";
+import Profile1 from "./components/useReducer/withContext/Profile";
 
 function App() {
   return (
@@ -142,8 +146,19 @@ function App() {
       </UserProviderMulti> */}
 
       {/* higher order component */}
-      <ClickCounter name="Clicked" />
-      <HoverCounter name="Hovered" />
+      {/* <ClickCounter name="Clicked" />
+      <HoverCounter name="Hovered" /> */}
+
+      {/* reducer  */}
+      <ReducerParentCounter />
+
+      {/* <AuthProvider>
+        <div className="container">
+          <h1>Authentication Example with useReducer and useContext</h1>
+          <Login />
+          <Profile1 />
+        </div>
+      </AuthProvider> */}
     </>
   );
 }

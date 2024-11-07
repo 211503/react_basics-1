@@ -586,3 +586,73 @@ h2 {
   align-items: center;
   background-color: var(--tertiary-color);
 }
+
+/* useReducer */
+.reducer-container {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.reducer-container h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.reducer-container label {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.reducer-container input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg-color);
+  font-size: 1rem;
+}
+
+.reducer-container input[type="number"]:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+}
+
+.reducer-container h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+
+.reducer-container button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1rem;
+  color: var(--btn-color);
+  background-color: var(--btn-bg-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reducer-container button:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+.reducer-container button:active {
+  transform: scale(0.98);
+}
+
+.reducer-container button:focus {
+  outline: none;
+}
