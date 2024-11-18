@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to React</title>
-  </head>
-  <body>
-    <div id="root"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Event Manager with Date Filtering</h1>
+    
+    <!-- Filter Section -->
+    <div class="filter">
+        <label for="event-date">Filter by Date: </label>
+        <input type="date" id="event-date" name="event-date">
+        <button onclick="filterEvents()">Filter</button>
+    </div>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <h2>Upcoming Events</h2>
+    <div id="events-list">
+        <!-- Upcoming events will be displayed here -->
+    </div>
+
+    <br>
+    <a href="addEvent.html">Add a new Event</a>
+
+    <script>
+        const events = [
+            { title: "Event 1", date: "2024-11-20", description: "Description for Event 1" },
+            { title: "Event 2", date: "2024-11-22", description: "Description for Event 2" },
+            { title: "Event 3", date: "2024-11-23", description: "Description for Event 3" },
+            { title: "Past Event", date: "2024-10-10", description: "This event is in the past" }
+        ];
+
+        // Function to display events
+        function displayEvents(filteredEvents) {
+            const eventsList = document.getElementById('events-list');
+            eventsList.innerHTML = '';
+            filteredEvents.forEach(event => {
+                const eventDiv = document.createElement('div');
+                eventDiv.classList.add('event');
+                eventDiv.innerHTML = `<h3>${event.title}</h3><p>Date: ${event.date}</p><p>${event.description}</p>`;
+                eventsList.appendChild(eventDiv);
+            });
+        }
+
+        // Function to filter events by selected date
+        function filterEvents() {
+            const selectedDate = document.getElementById('event-date').value;
+            const filteredEvents = selectedDate ? events.filter(event => event.date === selectedDate) : events;
+            displayEvents(filteredEvents);
+        }
+
+        // Function to get upcoming events
+        function getUpcomingEvents() {
+            const today = new Date().toISOString().split('T')[0];  // Get today's date in YYYY-MM-DD format
+            const upcomingEvents = events.filter(event => event.date >= today);
+            displayEvents(upcomingEvents);
+        }
+
+        // Initial call to display upcoming events
+        getUpcomingEvents();
+    </script>
+</body>
 </html>
